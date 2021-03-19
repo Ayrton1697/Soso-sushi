@@ -1,0 +1,42 @@
+
+:root{
+    --color-primary:#ea2426;
+    --color-black: black;
+    --color-white: white;
+    --swiper-theme-color: rgb(255, 255, 255) !important; 
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: none;
+    
+    @include respond(tab-land){
+        font-size: 56.25%; //Si queres que sea de 8px en tablets-land, haces 8px/16px=50%
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(phone){
+        font-size: 30%;
+    }
+    @include respond(big-desktop){
+        font-size: 75%;
+    }
+}
+body{
+    background-color: var(--color-black);
+    font-weight: 200;
+    overflow-x: hidden;
+}

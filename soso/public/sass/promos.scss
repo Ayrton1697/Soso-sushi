@@ -1,0 +1,26 @@
+.promos{
+    padding: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__texto{
+        flex: 0 0 60%;
+        font-size: 5rem;
+        &--promo{
+            font-size: 10rem;
+            
+        }
+        
+    }   
+    &__photo{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--picture{
+            width: 100%;
+        
+        }
+    }
+}
