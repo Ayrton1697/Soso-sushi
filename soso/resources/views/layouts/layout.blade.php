@@ -33,7 +33,9 @@
     <div class="navigation">
 
         <header class="section-header" id="inicio">
-            <img src="img/2.png" alt="" class="img--logo">
+          <a href="{{route('index')}}" class="redirect-home">
+          <img src="img/2.png" alt="" class="img--logo">
+          </a>
         </header>
 
         <input type="checkbox" id="check" class="navigation__checkbox">
@@ -47,7 +49,7 @@
                 <li class="navigation__item"><a href="{{route('index')}}/#nosotros" class="navigation__link">Nosotros</a></li>
                 <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Pedidos</a></li>
                 <li class="navigation__item"><a href="{{route('promos')}}" class="navigation__link">Promos</a></li>
-                <li class="navigation__item"><a href="{{route('index')}}/#menu" class="navigation__link">Menu</a></li>
+                <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Menu</a></li>
                 <li class="navigation__item"><a href="{{route('index')}}/#contact" class="navigation__link">Contacto</a></li>
                 <li class="navigation__item navigation__item--right">
                       <a href="{{route('carrito')}}" class="navigation__link">
@@ -81,7 +83,9 @@
      
   <footer class="footer">
     <div class="footer__logo">
+    <a href="{{route('index')}}" class="redirect-home">
       <img src="img/2.png" alt="" class="img--logo">
+    </a>
     </div>
     <div class="footer__mid">
 

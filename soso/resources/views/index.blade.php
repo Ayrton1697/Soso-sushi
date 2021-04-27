@@ -20,8 +20,8 @@
 
              
                 <div class="button--placer">
-                    <a href="menu.html" 
-                    class="btn btn--white">Consultá la promo</a>
+                    <a href="{{route('promos')}}" 
+                    class="btn btn--white">Consultá las promos</a>
                   </div>
                 
                 </div>

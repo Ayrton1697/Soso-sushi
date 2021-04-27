@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-    @section('title', 'Soso Sushi|Promos')
+    @section('title', 'Soso Sushi | Promos')
 
     @section('content')
 

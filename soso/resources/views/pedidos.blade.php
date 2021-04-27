@@ -28,8 +28,10 @@
 <body>
     <div class="navigation">
 
-          <header class="section-header" id="inicio">
+          <header class="section-header-2" id="inicio">
+          <a href="{{route('index')}}" class="redirect-home">
             <img src="{{asset('img/2.png')}}" alt="" class="img--logo">
+          </a>
           </header>
 
         <input type="checkbox" id="check" class="navigation__checkbox">
@@ -45,13 +47,13 @@
                 <li class="navigation__item"><a href="{{route('index')}}/#nosotros" class="navigation__link">Nosotros</a></li>
                 <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Pedidos</a></li>
                 <li class="navigation__item"><a href="{{route('promos')}}" class="navigation__link">Promos</a></li>
-                <li class="navigation__item"><a href="{{route('index')}}/#menu" class="navigation__link">Menu</a></li>
+                <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Menu</a></li>
                 <li class="navigation__item"><a href="{{route('index')}}/#contact" class="navigation__link">Contacto</a></li>
                 <li class="navigation__item navigation__item--right">
                 
                       <a href="{{route('carrito')}}" class="navigation__link">
-                     <livewire:cart-qty/>
-                      <i class="icon-ecommerce-cart-content navigation__cart"></i>
+                        <livewire:cart-qty/>
+                        <i class="icon-ecommerce-cart-content navigation__cart"></i>
                       </a>
                 </li>
         </ul>
@@ -60,24 +62,12 @@
                 <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
                 <label for="navi-toggle" class="navigation__button navigation__button--carrito">
+     
+                    <a href="{{route('carrito')}}" class="navigation__link navigation__item--right">
+                      <livewire:cart-qty/>
+                      <i class="icon-ecommerce-cart-content navigation__cart  navigation__cart--2"></i>
+                    </a>
 
-                    
-                            <a href="{{route('carrito')}}" class="navigation__link">
-                                    @if (Session::has('cart'))
-                                        
-                                    <span class="cart__qty" style="font-size: 1.3rem;
-                        background-color: #baa763;
-                        border-radius: 9rem;
-                        color: white;
-                        position: absolute;
-                        width: 38%;
-                        top: 5px;
-                        right: 0;"
-                        >{{ Session::get('cart')->totalQty}}</span>
-
-                                    @endif
-                                <i class="icon-ecommerce-cart-content navigation__cart  navigation__cart--2"></i>
-                            </a>
                 </label>
           <script>
         
@@ -186,7 +176,9 @@
 
   <footer class="footer">
     <div class="footer__logo">
+    <a href="{{route('index')}}" class="redirect-home">
       <img src="img/2.png" alt="" class="img--logo">
+    </a>
     </div>
     <div class="footer__mid">
 
@@ -218,7 +210,7 @@
   <div id="{{$product->id}}" class="modal">
     <div class="add-modal">
       <span class="modal-title">{{$product->name}}</span>
-
+      <span class="modal-description">{{$product->description}}</span>
           <livewire:add-to-cart :item="$product" :key="$product->id"/>
         <!-- <form action="{{route('cart.add')}}" method="post">
                 @csrf

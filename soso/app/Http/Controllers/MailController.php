@@ -36,10 +36,10 @@ class MailController extends Controller
             $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;                                    // TCP port to connect to, use 465 for 
             $mail->setFrom($_POST['email'], $_POST['nombre']);
-            $mail->addAddress('deamigossrl@gmail.com', 'De Amigos Web');     // Add a recipient deamigossrl@gmail.com
+            $mail->addAddress('', 'Soso Sushi Web');     // Add a recipient
             $mail->addReplyTo($_POST['email'], $_POST['nombre']);
             $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'De Amigos Consultas';
+            $mail->Subject = 'Soso Web Consultas';
             $mail->Body    = $_POST['mensaje'];
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             $mail->SMTPOptions = array(

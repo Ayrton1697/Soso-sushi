@@ -36,8 +36,20 @@
                 @endif
          
         </div>
-        @if (isset($cart) && count($cart['items']))
-        <a href="#" class="send__pedido">Enviar pedido</a>
+        @if (isset($cart) && count($cart['items']))              
+                    <a class="send__pedido" target="_blank" href="https://wa.me/541126396961?text= 
+
+                        Hola! Me gustaria realizar el siguiente pedido:%0A%09
+                        
+                        <?php foreach ($cart['items'] as $item): ?>
+                            %0A	&#x25cf; {{ $item['item']['name']. ' x ' .$item['qty']. ' = $ '.$item['price']}}%0A%0A
+                        <?php  endforeach; ?>
+                        
+                        %0a  Total: $ {{$cart['totalPrice']}}
+                        " 
+                            >Hacer pedido
+                    </a>     
+
         @endif
     </section>
 

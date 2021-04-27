@@ -18,6 +18,14 @@
     // transform: translate(-50%,-50%);
     // z-index: 100;
 }
+.section-header-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+}
 .section-promos{
     display: flex;
     align-items: center;

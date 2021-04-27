@@ -25,6 +25,8 @@
         @include respond(tab-port){
             flex-direction: column;
             flex: 0 0 100%;
+            background-blend-mode: luminosity;
+            
         }
 
         &--1{
@@ -77,6 +79,9 @@
 
          @include respond(phone){
             width: min-content;
+         }
+         @include respond(tab-port){
+            top: 50%;
          }
     }
     @include respond(tab-port){
