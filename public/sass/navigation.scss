@@ -1,0 +1,263 @@
+.navigation{
+
+    height: 10rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+
+    @include respond(phone){
+        font-size: 3.7rem;
+        flex-direction: column;
+        height: 15rem;
+    }
+    &__checkbox{
+        display: none;
+    }
+    &__background{
+        display: none;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image:radial-gradient(var(--color-primary),rgb(32, 31, 31));
+        z-index: 1000;
+        transition: transform .8s;
+
+        @include respond(tab-land){
+            top: 4.5rem;
+            right: 4.5rem;
+            display: block;
+        }
+        @include respond(phone){
+            top: 50%;
+            right: -50%;
+        }
+    }
+   
+    &--carrito{
+        position: fixed !important;
+        left: 4rem !important;
+    }
+    &-nav{
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        transition:  .3s;
+
+        @include respond(tab-land){
+            background-color: red;
+            width: 100%;
+            height: 100vh;
+            display: none;
+        }
+    }
+&__list{
+
+   display: flex;
+   
+
+    // @include respond(phone){
+    //     flex-direction: column;
+    //     position: fixed;
+    //     transform: translate(-50%, 70%);
+    //     left: 150%;
+    //     z-index: 10;
+    //     transition: all .4s;
+    // }
+    @include respond(tab-land){
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 10000000000;
+        transform: translate(-50%, -50%);
+   }
+
+  
+}
+&__checkbox:checked ~ &__background{
+    transform: scale(80);
+}
+// #check:checked ~ .navigation__list{
+//     left: 50%;
+// }
+&__checkbox:checked ~ &-nav{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    display: contents;
+}
+&__checkbox:checked ~ &__list{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    display: contents;
+}
+
+&__icon{
+    position: relative;
+    
+    &,&::before,&::after{
+        display: inline-block;
+        width: 3rem;
+        height: 2px;
+        background-color:rgb(39, 35, 35);
+        transition: all .2s;
+    }
+
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    &::before{
+        top: -.8rem;
+    }
+    &::after{
+        top: .8rem;
+    }
+}
+
+&__item{
+    
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    padding: 0rem 4rem;
+    &:not(:first-child){
+       
+    }
+    &:hover .navigation__link{
+        color: rgb(168, 168, 168);
+    }
+    @include respond(tab-land){
+        padding: 2rem;
+    }
+    &--right{
+        
+        position: relative;
+        padding: 1rem;
+
+        .cart__qty{
+            font-size: 1.5rem;
+            background-color: white;
+            border-radius: 9rem;
+            color: black;
+            position: absolute;
+            width: max-content;
+            left: 50%;
+            padding: .5rem;
+            box-shadow: 0rem 1rem 2rem #0000002e;
+            z-index: 20;
+
+            @include respond(tab-land){
+                right: 38%;
+                top: 0%;
+                width: max-content;
+                padding: 2rem;
+                background-color: var(--color-primary);
+                font-size: 2.5rem;
+                color: white;
+            
+            }
+        }
+
+        @include respond(tab-land){
+            padding: 0;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+
+   
+}
+
+&__link{
+    text-decoration: none;
+    color: var(--color-white);
+    transition: all .2s;
+}
+
+    &__cart{
+        width: 8rem;
+        font-size: 3rem;
+        color: white;
+
+        &--2{
+            position: absolute;
+            color: black !important;
+            left: 50%;
+            top: 50%;
+            font-size: 4rem;
+            transform: translate(-50%, -50%);
+        }
+        @include respond(phone){
+            font-size: 5rem;
+        }
+    }
+
+    &__button{
+        display: none;
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(black, .1);
+        text-align: center;
+        cursor: pointer;
+    
+        @include respond(tab-land){
+            top: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include respond(phone){
+            height: 12rem;
+            width: 12rem;
+            top: 3rem;
+            right: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                }   
+    
+        &--carrito{
+            position: fixed !important;
+            left: 4rem !important;
+        }
+    }
+    &__button:hover &__icon::before{
+        top: -1rem;
+    }
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    
+}

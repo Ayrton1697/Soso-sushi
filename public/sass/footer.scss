@@ -1,0 +1,63 @@
+.footer{
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    justify-content: space-around;
+
+    @include respond(tab-port){
+        flex-direction: column;
+    }
+    &__list{
+
+        display: flex;
+        border-top: 1px solid white;
+        list-style: none;
+        padding: 5rem;
+    }
+    &__item{
+            padding: 0rem 2rem;
+            transition: all .3s;
+
+            &:hover{
+                transform: scale(1.2);
+                }
+                &:hover > .footer__link{
+                    color: rgb(102, 102, 102);
+                }
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+    }
+    &__logo{
+        transition: all .4s;
+        &:hover{
+            transform: rotate3d(1,0,0,60deg);
+        }
+
+        @include respond(tab-port){
+           margin-bottom: 5rem;
+        }
+    }
+    &__emfes{
+        font-size: 1.3rem;
+
+        &--link{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    &__socials{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icons{
+        padding: 2rem;
+        transition: all .4s;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}

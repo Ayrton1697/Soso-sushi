@@ -1,0 +1,35 @@
+.modal{
+
+        &-title{
+            font-size: 3.5rem;
+            color: var(--color-primary);
+        }
+        
+        &-description{
+            font-size: 1.7rem;
+            color: black;
+            text-align: center;
+        }
+}
+.add-modal{
+    font-size: 2rem;
+    padding: 3rem !important;
+    display: flex;
+    justify-content: space-between;
+    height: 30rem;
+    align-items: center;
+    flex-direction: column;
+}
+.btn--add{
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    margin: 3rem 0rem;
+    outline: none;
+    border: none;
+}

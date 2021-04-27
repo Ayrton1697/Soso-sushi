@@ -1,0 +1,145 @@
+
+.pedido-intersection{
+
+    @include respond(phone){
+    background-attachment: scroll;
+    }
+    padding: 15rem 0rem;
+    background: url(../img/img6.jpg);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.section-pedidos{
+
+}
+.pedido__item{
+
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &--title{
+        font-size: 5rem;
+        margin-left: 5rem;
+        color: var(--color-primary);
+    }
+}
+
+.pedido__items{
+        font-size: 2.5rem;
+        padding: 5rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+}
+.pedido--box{
+    text-decoration: none;
+    color: inherit;
+    padding: 3rem;
+    transition: all .4s;
+    display: flex;
+    flex: 0 0 50%;  
+    transition: all  .4s;
+
+    @include respond(tab-port){
+        margin: 3rem;
+        flex: 0 0 100%;  
+    }
+    
+    &:hover{
+        color: var(--color-primary);
+    }
+}
+.item--name{
+    margin-right: 2rem;
+}
+.item--price{
+    font-size: 3rem;
+    color:var(--color-primary);
+}
+
+.pedido-qty{
+    display: flex;
+    font-family: inherit;
+    justify-content: center;
+}
+.change-qty{
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background-color: white;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    outline: none;
+}
+.qty-input{
+    
+    width: 10rem;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+    font-family: inherit;
+    border: 1px solid var(--color-primary);
+    outline: none;
+    
+}
+.add-qty{
+
+}
+.less-qty{
+
+}
+
+.section-cart{
+    padding: 5rem;
+    text-align: center;
+}
+.cart{
+    padding: 5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-table{
+        flex:0 0 70%;
+        font-size: 3rem;
+        color: white;
+        // background: red;
+       
+    }
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    padding: 3rem;
+}
+tr{
+    text-align: center;   
+}
+th{
+    border-bottom: 1px solid white;
+}
+
+.send__pedido{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    transition: all .4s;
+
+    &:hover{
+        background-color: var(--color-primary);
+        color: white;
+        
+    }
+}

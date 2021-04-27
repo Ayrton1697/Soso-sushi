@@ -1,0 +1,121 @@
+.contacto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    filter: grayscale(1);
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 9rem 9rem 9rem;
+
+    @include respond(tab-port){
+        padding: 6rem 0rem;
+        flex-direction: column;
+    }
+
+    &__form{
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include respond(tab-port){
+            flex: 0 0 70%;
+        }
+       
+    }
+
+    &__input{
+            outline: none;
+            font-weight: 200;
+            color: var(--color-white);
+            background-color: inherit;
+            width: 85%;
+            padding: 1rem;
+            margin: 6rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-family: inherit;
+            border: none;
+            border-bottom: 1px solid var(--color-white);
+            // position: relative;
+            // z-index: 10;
+        
+            &::placeholder{
+            font-weight: 200;
+            color: white;
+            position: relative;
+            z-index: 10;
+        }
+
+   
+        }
+
+        // &__photo{
+        //     flex: 1;
+        //     background: url(../img/sushi4.jpg);
+        //     background-position: top;
+        //     background-size: cover;
+        //     background-position: initial;
+            
+            
+        // // }
+        // // &__photo{
+        // //     &--picture{
+        // //         position: absolute;
+        // //         z-index: 5;
+        // //         left: 0;
+        // //     }
+           
+        // }
+}
+
+.btn--submit{
+    color: var(--color-black);
+    border: 1px solid var(--color-white);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-black) 50%);
+    background-size: 220%;
+    cursor: pointer;
+
+    @include respond(phone){
+        color: white;
+    }
+}
+.show__message{
+    margin: 5rem 0rem;
+}
+.mail_message{
+    background-color: rgb(70, 189, 110);
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+}
+
+.contact__details{
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.info{
+    &__list{
+        margin-top: 5rem;
+        list-style: none;
+        text-decoration: none;
+        font-size: 2.5rem;
+    }
+    &__item{
+        margin: 3rem;
+        text-align: center;
+        color: white !important;
+        text-decoration: none !important;
+    }
+}
+a[href^="tel"] {
+    color: white !important; /* Inherit text color of parent element. */
+    text-decoration: none !important; /* Remove underline. */
+    /* Additional css `propery: value;` pairs here */
+  }
