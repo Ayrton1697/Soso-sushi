@@ -16,16 +16,6 @@
 
         </section>
 
-        <section class="section-promo--1">
-            <div class="swiper--promo">
-                <span class="swiper--promo--sub">Promo exclusiva WHATSAPP</span> 
-                <span class="swiper--promo--heading">Viernes y sábado</span> 
-            </div>
-            <div class="button--placer--promos">
-                    <span 
-                    class="btn btn--promo">Consultá la promo</span>
-                  </div>
-        </section>
 
         <section class="section-black">
 
@@ -46,16 +36,6 @@
 
         </section>
         
-        <section class="section-promo--4">
-            <div class="swiper--promo">
-                <span class="swiper--promo--heading">Promo MARTES</span> 
-                <span class="swiper--promo--sub">Sushi burger a eleccion</span> 
-            </div>
-            <div class="button--placer--promos">
-                    <span 
-                    class="btn btn--promo">2 X $885</span>
-                  </div>
-        </section>
 
         <section class="section-black">
 
@@ -68,7 +48,7 @@
             </div>
             <div class="button--placer--promos">
                     <span
-                    class="btn btn--promo">$490</span>
+                    class="btn btn--promo">$650</span>
                   </div>
         </section>
 
@@ -79,13 +59,44 @@
         <section class="section-promo--6">
             <div class="swiper--promo">
                 <span class="swiper--promo--heading">Promo JUEVES</span> 
-                <span class="swiper--promo--sub">Sushi salad</span> 
+                <span class="swiper--promo--sub">Sushi Salad a eleccion</span> 
             </div>
             <div class="button--placer--promos">
                     <span 
-                    class="btn btn--promo">2 X $825</span>
+                    class="btn btn--promo">2 X $1075</span>
                   </div>
         </section>
+    
+        <section class="section-black">
 
-        
+        </section>
+    
+        <section class="section-promo--1">
+            <div class="swiper--promo">
+                <span class="swiper--promo--sub">Promo exclusiva WHATSAPP</span> 
+                <span class="swiper--promo--heading">Viernes y sábado</span> 
+                <span class="swiper--promo--sub">Consultanos la promo exclusiva</span> 
+            </div>
+            <div class="button--placer--promos">
+                <a target="_blank" href="https://wa.me/541126396961?text= 
+
+            Hola! Me gustaria consultar sobre la promo whatsapp!" class="btn btn--promo" style="padding:0rem 2rem">  
+                    <i class="footer__icons fab fa-whatsapp"></i>1526396961
+                </a>
+            </div>
+        </section>
+        <section class="section-black">
+
+        </section>
+
+        <section class="section-promo--4">
+            <div class="swiper--promo">
+                <span class="swiper--promo--heading">Promo DOMINGO</span> 
+                <span class="swiper--promo--sub">Sushi Burger a elección</span> 
+            </div>
+            <div class="button--placer--promos">
+                    <span 
+                    class="btn btn--promo">2 X $1250</span>
+                </div>
+        </section>
     @endsection

@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+use App\Models\Product;
+
+class Search extends Component
+{
+
+    public $query;
+
+    public $products = [];
+
+
+    
+    public function render()
+    {
+        return view('livewire.search');
+    }
+}

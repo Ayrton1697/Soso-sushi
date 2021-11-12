@@ -1,4 +1,4 @@
-.section-header{
+.section-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +6,7 @@
     background-color: transparent;
     color: white;
 
-    @include respond(phone){
+    @include respond(phone) {
         color: #f6f6f6;
         position: absolute;
         top: 5%;
@@ -18,7 +18,7 @@
     // transform: translate(-50%,-50%);
     // z-index: 100;
 }
-.section-header-2{
+.section-header-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,21 +26,21 @@
     background-color: transparent;
     color: white;
 }
-.section-promos{
+.section-promos {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 9rem;
     color: var(--color-white);
 }
-.section-nosotros{
+.section-nosotros {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 9rem 0rem 0rem 0rem;
     color: var(--color-white);
 }
-.section-menu{
+.section-menu {
     // display: flex;
     // align-items: center;
     // flex-direction: column;
@@ -48,111 +48,101 @@
     overflow-x: hidden;
     color: white;
 
-    @include respond(phone){
+    @include respond(phone) {
         padding: 12rem 0rem;
     }
 }
-.section-intersection--1{
-
-    @include respond(phone){
-    background-attachment: scroll;
+.section-intersection--1 {
+    @include respond(phone) {
+        background-attachment: scroll;
     }
     padding: 25rem 0rem;
     background: url(../img/img14.jpg);
-    background-position:center;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
 }
-.section-promo--1{
-
-    @include respond(phone){
-    background-attachment: scroll;
-    }
-    padding: 25rem 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img6.jpg);
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-.section-promo--3{
-
-    @include respond(phone){
-    background-attachment: scroll;
-    }
-    padding: 25rem 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img12.jpg);
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-.section-promo--4{
-
-    @include respond(phone){
-    background-attachment: scroll;
-    }
-    padding: 25rem 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img8.jpg);
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-.section-promo--5{
-
-    @include respond(phone){
-    background-attachment: scroll;
-    }
-    padding: 25rem 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img9.jpg);
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-.section-promo--6{
-
-    @include respond(phone){
-    background-attachment: scroll;
-    }
-    padding: 25rem 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img10.jpg);
-    background-position:center;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-.section-intersection--2{
-
-    @include respond(phone){
+.section-promo--1 {
+    @include respond(phone) {
         background-attachment: scroll;
-        }
+    }
     padding: 25rem 0rem;
-    background:  url(../img/img7.jpg);
-    background-position:center;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img6.jpg);
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
 }
-.section-promo--2{
-
-    @include respond(phone){
+.section-promo--3 {
+    @include respond(phone) {
         background-attachment: scroll;
-        }
+    }
     padding: 25rem 0rem;
-    background:  linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),url(../img/img7.jpg);
-    background-position:center;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img12.jpg);
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
 }
-.section-black{
+.section-promo--4 {
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+    padding: 25rem 0rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img11.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-promo--5 {
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+    padding: 25rem 0rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img16.JPG);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-promo--6 {
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+    padding: 25rem 0rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img15.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-intersection--2 {
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+    padding: 25rem 0rem;
+    background: url(../img/img7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-promo--2 {
+    @include respond(phone) {
+        background-attachment: scroll;
+    }
+    padding: 25rem 0rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(24, 24, 24, 0.699)),
+        url(../img/img7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-black {
     background-color: black;
     padding: 5rem;
 }
-.section-contacto{
+.section-contacto {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,18 +150,17 @@
     padding: 9rem 0rem;
     color: var(--color-white);
 
-    @include respond(phone){
-        padding: 9rem  0rem;
+    @include respond(phone) {
+        padding: 9rem 0rem;
     }
 }
-.footer{
-    
+.footer {
     padding: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    @include respond(phone){
+    @include respond(phone) {
         padding: 0rem;
     }
 }

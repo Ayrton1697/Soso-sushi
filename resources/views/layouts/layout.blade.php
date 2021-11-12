@@ -25,7 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/3e89adbc58.js" crossorigin="anonymous"></script>
     <!--SCRIPTS PARA GSAP-->
-   
+    <script src="js/info-pedido.js"></script>  
+
     <title>@yield('title')</title>
     @livewireStyles
 </head>
@@ -49,7 +50,7 @@
                 <li class="navigation__item"><a href="{{route('index')}}/#nosotros" class="navigation__link">Nosotros</a></li>
                 <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Pedidos</a></li>
                 <li class="navigation__item"><a href="{{route('promos')}}" class="navigation__link">Promos</a></li>
-                <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Menu</a></li>
+                <li class="navigation__item"><a href="{{route('pedidos')}}" class="navigation__link">Menú</a></li>
                 <li class="navigation__item"><a href="{{route('index')}}/#contact" class="navigation__link">Contacto</a></li>
                 <li class="navigation__item navigation__item--right">
                       <a href="{{route('carrito')}}" class="navigation__link">
@@ -102,7 +103,7 @@
         <ul class="footer__list">
           <li class="footer__item"><a href="#inicio" class="footer__link">Inicio</a></li>
           <li class="footer__item"><a href="#nosotros" class="footer__link">Nosotros</a></li>
-          <li class="footer__item"><a href="#menu" class="footer__link">Menu</a></li>
+          <li class="footer__item"><a href="#menu" class="footer__link">Menú</a></li>
           <li class="footer__item"><a href="#contact" class="footer__link">Contacto</a></li>
       </ul>
     </div>
@@ -115,8 +116,9 @@
   @yield('scripts')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
- 
-
+   <!-- Remember to include jQuery :) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+   <script src="js/info-pedido.js"></script>  
   @livewireScripts
 
 </body>

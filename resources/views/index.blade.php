@@ -104,7 +104,7 @@
                   <div class="swiper-slide ">
                     <div class="menu__item menu__item--3">
                       <div class="menu__text">
-                      Salad Sushi
+                        Sushi Salad 
                       </div>
                     </div>
                   </div>
@@ -165,7 +165,7 @@
         <div class="contacto">
             <div class="contact__details">
                           <ul class="info__list">
-                            <li class="info__item">Todos los días - 18:45 a 22:45 hs</li>
+                            <li class="info__item">Todos los días - 18:30 a 22:30 hs</li>
                             <li class="info__item">*</li>
                             <li class="info__item">Delivery & Take Away</li>
                             <li class="info__item">47404443</li>  
@@ -177,7 +177,7 @@
 
 
          <form action="mail.php" method="POST" class="contacto__form">
-
+          @csrf
 
           <input type="text" name="nombre" class="contacto__input" placeholder="Nombre">
           <input type="email" name="email" class="contacto__input" placeholder="Email">

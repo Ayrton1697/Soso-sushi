@@ -1,74 +1,72 @@
-
-.pedido-intersection{
-
-    @include respond(phone){
-    background-attachment: scroll;
+.pedido-intersection {
+    @include respond(phone) {
+        background-attachment: scroll;
     }
     padding: 15rem 0rem;
     background: url(../img/img6.jpg);
-    background-position:center;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
 }
 
-.section-pedidos{
-
+.section-pedidos {
 }
-.pedido__item{
-
+.pedido__item {
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    &--title{
+    &--title {
         font-size: 5rem;
         margin-left: 5rem;
         color: var(--color-primary);
     }
 }
 
-.pedido__items{
-        font-size: 2.5rem;
-        padding: 5rem;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+.pedido__items {
+    font-size: 2.5rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.pedido--box{
+.pedido--box {
     text-decoration: none;
+    justify-content: space-between;
     color: inherit;
     padding: 3rem;
-    transition: all .4s;
+    transition: all 0.4s;
     display: flex;
-    flex: 0 0 50%;  
-    transition: all  .4s;
+    flex: 0 0 50%;
+    flex-direction: column;
+    transition: all 0.4s;
 
-    @include respond(tab-port){
-        margin: 3rem;
-        flex: 0 0 100%;  
+    @include respond(tab-port) {
+        margin: 1rem;
+        flex: 0 0 100%;
     }
-    
-    &:hover{
+
+    &:hover {
         color: var(--color-primary);
     }
 }
-.item--name{
+.item--name {
     margin-right: 2rem;
 }
-.item--price{
+.item--price {
     font-size: 3rem;
-    color:var(--color-primary);
+    float: right;
+    color: var(--color-primary);
 }
 
-.pedido-qty{
+.pedido-qty {
     display: flex;
     font-family: inherit;
     justify-content: center;
 }
-.change-qty{
+.change-qty {
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem;
@@ -77,8 +75,7 @@
     border: 1px solid var(--color-primary);
     outline: none;
 }
-.qty-input{
-    
+.qty-input {
     width: 10rem;
     font-size: 3rem;
     text-align: center;
@@ -86,48 +83,44 @@
     font-family: inherit;
     border: 1px solid var(--color-primary);
     outline: none;
-    
 }
-.add-qty{
-
+.add-qty {
 }
-.less-qty{
-
+.less-qty {
 }
 
-.section-cart{
+.section-cart {
     padding: 5rem;
     text-align: center;
 }
-.cart{
+.cart {
     padding: 5rem;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &-table{
-        flex:0 0 70%;
-        font-size: 3rem;
+    &-table {
+        flex: 0 0 70%;
+        font-size: 2.5rem;
         color: white;
         // background: red;
-       
     }
 }
-table{
+table {
     border-collapse: collapse;
 }
-td{
+td {
     padding: 3rem;
 }
-tr{
-    text-align: center;   
+tr {
+    text-align: center;
 }
-th{
+th {
     border-bottom: 1px solid white;
 }
 
-.send__pedido{
+.send__pedido {
     text-decoration: none;
     color: black;
     background-color: white;
@@ -135,11 +128,16 @@ th{
     padding: 1.5rem;
     border-radius: 2rem;
     margin: 0 auto;
-    transition: all .4s;
+    transition: all 0.4s;
 
-    &:hover{
+    &:hover {
         background-color: var(--color-primary);
         color: white;
-        
     }
+}
+.no-products-warning {
+    color: white;
+    font-size: 3rem;
+    margin: auto;
+    text-align: center;
 }

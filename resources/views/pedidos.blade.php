@@ -87,9 +87,15 @@
 
     </script>
  
-
-    dd($products->groupBy('tipo')['geishas'])
-    dd($products->groupBy('tipo'))
+      <div class="search-bar" style="text-align:center">
+        <form action="{{route('product.search')}}" method="GET" class="search__form">
+            <i class="fas fa-search search__icon" style="color:white"></i>
+            <input type="text" name="search" class="search-input" placeholder="Buscá tu producto" style="width:70%; padding:1.5rem; margin:4rem; outline:none">
+        </form>
+      </div>
+  @if (empty($products) || count($products) == 0)
+      <div class="no-products-warning">No hay productos que coincidan con la búsqueda.</div>
+  @else
     @foreach($products->groupBy('tipo') as $tipo => $product)
       <section class="section-pedidos" id="pedido">
           <div class="pedido__item">
@@ -100,8 +106,11 @@
 
               @foreach($product as $prod)
                   <a href="#{{$prod->id}}" class="pedido--box"  rel = "modal:open">
-                    <span class="item--name">{{$prod->name}}</span>
-                    <span class="item--price">$ {{$prod->price}} +</span>
+                    <div class="column">
+                      <span class="item--name">{{$prod->name}}</span>
+                      <span class="item--price">$ {{$prod->price}} +</span>
+                    </div>
+                    <span class="modal-description" style="color:red">{{$prod->description}}</span>
                   </a>
               @endforeach
         
@@ -112,67 +121,7 @@
           </div>
       </section>
     @endforeach
-    <!-- <section class="section-pedidos" id="pedido">
-      <div class="pedido__item">
-          <div class="pedido__item--title">
-          NIGIRIS & SASHIMI
-          </div>
-          <div class="pedido__items">
-              <a href="#" class="pedido--box">
-                <span class="item--name">NIGIRI SALMON (X5)</span>
-                <span class="item--price">$310</span>
-              </a>
-              <a  href="#" class="pedido--box">
-                <span class="item--name">NIGIRI SALMON (X10)</span>
-                <span class="item--price">$ 530</span>
-              </a>
-              <a href="#" class="pedido--box">
-                <span class="item--name">NIGIRI PANKO (X5)</span>
-                <span class="item--price">$310</span>
-              </a>
-              <a href="#" class="pedido--box">
-                <span class="item--name">PANKO (X10)</span>
-                <span class="item--price">$ 530</span>
-              </a>
-              <a href="#" class="pedido--box">
-                <span class="item--name">SALMON AHUMADO (X5)</span>
-                <span class="item--price">$310</span>
-              </a>
-              <a href="#" class="pedido--box">
-                <span class="item--name">SALMON AHUMADO (X10)</span>
-                <span class="item--price">$ 530</span>
-              </a>
-              
-       
-          </div>
-  
-      </div>
-  </section>
-  <section class="section-intersection--2">
-
-  </section> -->
-  <!-- <section class="section-cart">
-      <h2 class="heading--secondary">Carrito</h2>
-      <div class="cart">
-          <table class="cart-table">
-              <tr>
-                <th>Item</th>
-                <th>Cant.</th>
-                <th>Precio</th>
-              </tr>
-              <tr>
-                <td>Jill</td>
-                <td>5</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>1</td>
-                <td>94</td>
-              </tr>
-          </table>
-      </div>
-  </section> -->
+  @endif
 
   <footer class="footer">
     <div class="footer__logo">
@@ -212,41 +161,12 @@
       <span class="modal-title">{{$product->name}}</span>
       <span class="modal-description">{{$product->description}}</span>
           <livewire:add-to-cart :item="$product" :key="$product->id"/>
-        <!-- <form action="{{route('cart.add')}}" method="post">
-                @csrf
-            <div class="pedido-qty">
-              <button type="button" class="change-qty less-qty">-</button>
-              <input type="number" value="1" class="qty-input" min="1" max="99" maxlength="2" step="1" name="qty">
-              <input type="hidden" name="id" value="{{$product->id}}">
-              <button type="button" class="change-qty add-qty">+</button>
-            </div>
-          
-            <button type="submit" name="submit" class="btn--add">Agregar al carrito <span class="modal-price">$ {{$product->price}}</span></button>
-        </form> -->
+
     </div>
 
   </div>
 @endforeach
-<!-- <div id="2" class="modal">
-  <div class="add-modal">
-    <span class="modal-title">Geishas: Salmón (Xxxx10)</span>
 
-    <form action="{{route('cart.add')}}" method="post">
-        @csrf
-      	<div class="pedido-qty">
-          <button type="button" class="change-qty less-qty">-</button>
-            <input type="number" value="1" class="qty-input" min="1" max="99" maxlength="2" step="1" name="qty">
-            <input type="hidden" name="id" value="5">
-            <button type="button" class="change-qty add-qty">+</button>
-        </div>
-        
-          <button type="submit" name="submit" class="btn--add">Agregar al carrito <span class="modal-price">$310</span></button>
-
-    </form>
-
-  </div>
-
-</div> -->
 
 
 <script src="js/qty.js" type="text/javascript"></script>

@@ -15,7 +15,6 @@ body{
 }
 .heading--sub{
     font-size: 1.5rem;
-    font-family: arial;
     font-weight: 300;
     text-align: center;
 }
@@ -34,4 +33,9 @@ body{
     font-size: 10rem;
     font-weight: 400;
     text-align: center;
+}
+.error-msg{
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: red;
 }

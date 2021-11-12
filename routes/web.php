@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PedidoController;
 use App\Models\Product;
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,17 @@ use App\Models\Product;
 
 
 Route::view('/', 'index')->name('index');
+
+Route::get('/completa-tu-informacion', function(){
+    return view('infopedido',
+        [
+            'cart'=> Session::get('cart')
+           ]);
+        })->name('info.pedido');
+
+Route::post('enviar-info',[PedidoController::class, 'enviarInfo'])->name('enviar.info');
+
+Route::get('search-products',[ProductController::class, 'search' ])->name('product.search');
 
 Route::view('/promos', 'promos')->name('promos');
 

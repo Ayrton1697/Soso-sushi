@@ -118,13 +118,13 @@ class ProductController extends Controller
         $name= $request->input('search');
 
         $productos= Product::where('name','like','%'.$name.'%')
-                            ->whereNull('stock')
+                            ->orWhere('tipo', 'like','%'.$name.'%')
                             ->orderBy('name')->get();
                             // ->paginate(16);
         
 
 
-        return view('productos',['productos'=>$productos]);
+        return view('pedidos',['products'=>$productos]);
 
     }
 
